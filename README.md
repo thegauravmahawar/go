@@ -7,6 +7,7 @@
 ## Topics
 
 - [Go by Example](gobyexample)
+- [RSS Aggregator](rss-aggregator)
 
 ## Commands
 
