@@ -49,7 +49,7 @@ func main() {
         } else {
             fmt.Println("f2 worked:", r)
         }
-	}
+    }
 
     _, e := f2(42)
     if ae, ok := e.(*argError); ok {
