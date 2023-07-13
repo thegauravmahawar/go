@@ -1,5 +1,9 @@
 # RSS Aggregator
 
+## Reference
+
+- [RSS Aggregator](https://youtu.be/un6ZyFkqFKo)
+
 ## Commands
 
 **Initialize a Go module**
