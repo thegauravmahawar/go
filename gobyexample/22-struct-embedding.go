@@ -3,40 +3,40 @@ package main
 import "fmt"
 
 type base struct {
-    num int
+	num int
 }
 
 func (b base) describe() string {
-    return fmt.Sprintf("base with num=%v", b.num)
+	return fmt.Sprintf("base with num=%v", b.num)
 }
 
 // A container embeds a base. An embedding looks like a field without a name.
 type container struct {
-    base
-    str string
+	base
+	str string
 }
 
 func main() {
 
-    co := container{
-        base: base{
-            num: 1,
-        },
-        str: "some name",
-    }
+	co := container{
+		base: base{
+			num: 1,
+		},
+		str: "some name",
+	}
 
-    fmt.Printf("co={num: %v, str: %v}\n", co.num, co.str)
+	fmt.Printf("co={num: %v, str: %v}\n", co.num, co.str)
 
-    fmt.Println("also num:", co.base.num)
+	fmt.Println("also num:", co.base.num)
 
-    // Since container embeds base, the methods of base also
-    // become methods of a container.
-    fmt.Println("describe:", co.describe())
+	// Since container embeds base, the methods of base also
+	// become methods of a container.
+	fmt.Println("describe:", co.describe())
 
-    type describer interface {
-        describe() string
-    }
+	type describer interface {
+		describe() string
+	}
 
-    var d describer = co
-    fmt.Println("describer:", d.describe())
+	var d describer = co
+	fmt.Println("describer:", d.describe())
 }
